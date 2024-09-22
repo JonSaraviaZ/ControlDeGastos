@@ -1,0 +1,298 @@
+/* Importación de la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+/* Configuraciones de estilos del cuerpo y sus componentes */
+body {
+    background: url('../img/codigo.svg'), linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+
+
+    background-size: auto;
+    background-repeat: no-repeat;
+    /* Hace que la imagen cubra todo el área del elemento */
+    background-position: right;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Keyframes para animación */
+@keyframes rotacion1 {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    } 
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+input[type="text"],
+input[type="number"] {
+    font-size: 1rem;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 40px;
+    width: fit-content;
+    background-color: #1875E8;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: fit-content;
+    overflow-y: auto;
+    width: 100%;
+}
+
+ul li {
+    padding: 10px;
+    background-color: #041832;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    top: 110px;
+    left: 120px;
+    width: 1200px;
+    min-height: 80vh;
+    margin: 0px auto;
+    padding: 20px;
+    background: linear-gradient(0deg, rgba(20, 68, 128, 0.3), rgba(20, 68, 128, 0.3)),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+
+    border-radius: 24px;
+    color: white;
+    box-shadow: 4px 4px 20px 0px #01080E26;
+    border: 1px solid #1875E8
+}
+
+.container {
+    display: flex;
+    gap: 45px;
+    width: 860px;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px;
+    opacity: 0px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    animation: rotacion1 1.5s ease-out;
+}
+
+.img1{
+    height: 80%;
+    width: 80%;
+}
+
+.img2{
+    height: 60%;
+    width:20%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    gap: 20px;
+    animation: rotacion1 1.5s ease-out;
+}
+
+.boton-container{
+    display: flex;
+    gap: 5px;
+}
+
+.total {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    animation: rotacion1 1.5s ease-out;
+}
+
+/* Media queries */
+
+/* Teléfonos pequeños */
+
+@media (max-width: 480px){
+    body{
+        width: 80vw;
+        overflow: hidden;
+    }
+    .container{
+        padding: 0px 40px 0px 40px;
+    }
+    .main-container{
+        width: 55vw;
+        margin: 5% 70px;
+    }
+    .form-group{
+        width: 50vw;
+    }
+
+    #botonFormulario{
+        width: 50vw;
+        font-size: medium;
+    }
+
+    ul{
+        margin: 0px;
+    }
+
+    ul li{
+        display: block;
+        text-align: center;
+    }
+
+    .boton-container{
+        display: block;
+        height: 10%;
+        margin: 5%;
+        margin: 10px;
+    }
+    .botonModificar, .botonEliminar{
+        width: 50vw;
+        font-size: medium;
+        margin-top: 5px;
+    }
+    .total{
+        font-size: medium;
+    }
+}
+
+/* Teléfonos medianos */
+
+@media (min-width:481px) and (max-width:768px){
+    body{
+        width: 80vw;
+        overflow: hidden;
+    }
+    .main-container{
+        margin: 2% 50px 14px 50px;
+        width: 70vw;
+    }
+    .container{
+        padding: 20px 45px 20px 45px;
+    }
+    .form-group{
+        width: 50vw;
+    }
+
+    ul{
+        margin: 0px;
+    }
+
+    ul li{
+        display: block;
+        text-align: center;
+        font-size: small;
+    }
+
+    .infoElemento{
+        padding: 0px;;
+    }
+
+    .boton-container{
+        display: flex;
+        height: 10%;
+        margin: 10px;
+        justify-content: center;
+    }
+
+}
+
+/* Tabletas */
+
+@media (min-width:769px) and (max-width:1024px){
+    .main-container{
+        margin-top: 2%;
+        width: 50vw;
+    }
+
+    .form-group{
+        width: 50vw;
+    }
+
+    ul{
+        margin: 0px;
+    }
+
+    ul li{
+        display: block;
+        text-align: center;
+    }
+
+    .boton-container{
+        height: 10%;
+        margin: 5%;
+        margin: 10px;
+        justify-content: center;
+    }
+}
+
+/* Laptops grandes */
+
+@media (min-width:1025px) and (max-width:1280px){
+    .main-container{
+        margin-top: 2%;
+        width: 50vw;
+    }
+    .form-group{
+        width: 35vw;
+    }
+    ul{
+        margin: 0px;
+    }
+    ul li{
+        display: block;
+        text-align: center;
+    }
+
+    .boton-container{
+        height: 10%;
+        margin: 5%;
+        margin: 10px;
+        justify-content: center;
+    }
+}
+
+/* Pantallas grandes */
+
+@media (min-width:1281px){
+    .main-container{
+        margin-top: 2%;
+    }
+}
